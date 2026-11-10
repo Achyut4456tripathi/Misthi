@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Misthi – The Multi Cuisine Pure Veg Restaurant, Naini Prayagraj</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#fffaf3;--surface:#fff;--text:#2b1d14;--muted:#6f5d50;--accent:#d9480f;--accent2:#2f9e44;--line:#eadfce;--hero:#3b1a08;--herotext:#fff3e0;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17110c;--surface:#241a13;--text:#f5eadd;--muted:#b9a794;--accent:#ff8c4a;--accent2:#69db7c;--line:#3a2b20;--hero:#2a1205;--herotext:#fff3e0;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#17110c;--surface:#241a13;--text:#f5eadd;--muted:#b9a794;--accent:#ff8c4a;--accent2:#69db7c;--line:#3a2b20;--hero:#2a1205;--herotext:#fff3e0;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'Poppins',system-ui,sans-serif;line-height:1.6}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;margin:0}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:auto;padding:0 20px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--surface);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:'Playfair Display',serif;font-weight:700;font-size:1.4rem;color:var(--accent)}
+nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;font-size:.9rem;font-weight:500}
+@media(max-width:640px){nav ul{display:none}}
+.btn{display:inline-block;padding:11px 22px;border-radius:999px;font-weight:600;font-size:.92rem;border:2px solid var(--accent);background:var(--accent);color:#fff;cursor:pointer}
+.btn.ghost{background:transparent;color:inherit;border-color:currentColor}
+.hero{background:linear-gradient(135deg,var(--hero),#7a2e0b);color:var(--herotext);text-align:center;padding:80px 0 70px}
+.hero .veg{display:inline-flex;align-items:center;gap:8px;border:1px solid #ffffff55;padding:4px 14px;border-radius:999px;font-size:.85rem}
+.dot{width:12px;height:12px;border:2px solid #4cd964;display:inline-grid;place-items:center}.dot::after{content:"";width:6px;height:6px;border-radius:50%;background:#4cd964}
+.hero h1{font-size:clamp(2.4rem,7vw,4.2rem);margin:18px 0 4px}
+.hero .hi{font-size:1.3rem;opacity:.9;margin-bottom:14px}
+.hero p{max-width:560px;margin:0 auto 26px;opacity:.9}
+.hero .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.stats{display:flex;justify-content:center;gap:34px;margin-top:38px;flex-wrap:wrap}
+.stats b{display:block;font-size:1.5rem;font-family:'Playfair Display',serif}
+.stats span{font-size:.8rem;opacity:.8}
+section{padding:64px 0}
+.title{text-align:center;margin-bottom:34px}
+.title h2{font-size:clamp(1.8rem,4vw,2.4rem)}
+.title p{color:var(--muted);margin:6px 0 0}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px}
+.card .ic{font-size:2rem}.card h3{font-size:1.15rem;margin:8px 0 4px}.card p{margin:0;color:var(--muted);font-size:.92rem}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:24px}
+.tab{padding:8px 18px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--text);font:500 .9rem 'Poppins',sans-serif;cursor:pointer}
+.tab[aria-selected="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+.menu{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.item{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;gap:10px;align-items:flex-start}
+.item .dot{flex:none;margin-top:6px}.item b{display:block;font-weight:600}.item small{color:var(--muted)}
+.note{text-align:center;color:var(--muted);font-size:.85rem;margin-top:18px}
+.alt{background:var(--surface);border-block:1px solid var(--line)}
+.two{display:grid;gap:34px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:center}
+.two ul{padding-left:18px;color:var(--muted)}
+.big{background:linear-gradient(135deg,var(--accent),#f08c00);color:#fff;border-radius:20px;padding:40px;text-align:center}
+.big .rate{font-size:3.4rem;font-family:'Playfair Display',serif;line-height:1}
+.order{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.contact{display:grid;gap:14px}
+.contact div{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.contact small{color:var(--muted);display:block}
+footer{background:var(--hero);color:var(--herotext);text-align:center;padding:28px 20px;font-size:.88rem}
+.float{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));background:#25d366;color:#fff;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;font-size:1.6rem;box-shadow:0 4px 14px #0004;z-index:30}
+@keyframes up{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes drift{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-26px) rotate(12deg)}}
+@keyframes flow{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
+@keyframes pop{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:none}}
+@keyframes ring{0%{box-shadow:0 0 0 0 #25d366aa}100%{box-shadow:0 0 0 22px #25d36600}}
+@keyframes slide{to{transform:translateX(-50%)}}
+@keyframes shine{to{background-position:200% center}}
+.hero{position:relative;overflow:hidden;background-size:300% 300%;animation:flow 14s ease infinite}
+.hero .wrap{position:relative;z-index:1}
+.fl{position:absolute;font-size:2.2rem;opacity:.35;animation:drift 6s ease-in-out infinite;pointer-events:none}
+.hero .veg{animation:pop .7s both}
+.hero h1{animation:up .9s .15s both;background:linear-gradient(90deg,#fff3e0,#ffb366,#fff3e0);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:up .9s .15s both,shine 5s linear infinite}
+.hero .hi{animation:up .9s .3s both}.hero p{animation:up .9s .45s both}.hero .cta{animation:up .9s .6s both}.stats{animation:up .9s .8s both}
+.btn{transition:transform .25s,box-shadow .25s}.btn:hover{transform:translateY(-3px);box-shadow:0 8px 20px #d9480f55}
+.card{transition:transform .3s,box-shadow .3s}.card:hover{transform:translateY(-8px);box-shadow:0 14px 30px #0002}
+.card .ic{display:inline-block;animation:drift 5s ease-in-out infinite}
+.item{animation:pop .45s both;transition:transform .25s,border-color .25s}.item:hover{transform:translateX(6px);border-color:var(--accent)}
+.item:nth-child(2){animation-delay:.05s}.item:nth-child(3){animation-delay:.1s}.item:nth-child(4){animation-delay:.15s}.item:nth-child(5){animation-delay:.2s}.item:nth-child(6){animation-delay:.25s}.item:nth-child(n+7){animation-delay:.3s}
+.tab{transition:all .25s}.tab:hover{transform:translateY(-2px);border-color:var(--accent)}
+.float{animation:ring 2s infinite}
+.strip{background:var(--accent);color:#fff;overflow:hidden;white-space:nowrap;font-weight:600;padding:10px 0}
+.strip div{display:inline-block;width:max-content;animation:slide 22s linear infinite}
+.strip span{padding:0 26px}
+@supports (animation-timeline:view()){.title,.two>*,.big{animation:up linear both;animation-timeline:view();animation-range:entry 0% entry 35%}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.logo{display:flex;align-items:center;gap:9px}.logo svg{width:38px;height:38px;flex:none;transition:transform .4s}.logo:hover svg{transform:rotate(-8deg) scale(1.08)}
+.lg-ring{transform-origin:24px 24px;animation:spin 24s linear infinite}
+.logo-big{width:96px;height:96px;display:block;margin:0 auto 14px;animation:pop .8s both,drift 6s 1s ease-in-out infinite;filter:drop-shadow(0 6px 14px #0006)}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a href="#top" class="logo"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#d9480f"/><circle class="lg-ring" cx="24" cy="24" r="19" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="2 3"/><path d="M12 34V18l12 11 12-11v16" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 11c5-1 9 2 9 6-5 1-9-1-9-6z" fill="#69db7c"/></svg>Misthi</a>
+<ul><li><a href="#about">About</a></li><li><a href="#menu">Menu</a></li><li><a href="#banquet">Banquet</a></li><li><a href="#contact">Contact</a></li></ul>
+<a class="btn" href="tel:+919919887770">Call Now</a></div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+<span class="fl" style="left:6%;top:18%">🍜</span><span class="fl" style="right:8%;top:14%;animation-delay:-2s">🥘</span><span class="fl" style="left:12%;bottom:12%;animation-delay:-4s">🫓</span><span class="fl" style="right:14%;bottom:16%;animation-delay:-1s">🥟</span>
+<svg class="logo-big" viewBox="0 0 48 48" role="img" aria-label="Misthi logo"><circle cx="24" cy="24" r="23" fill="#d9480f"/><circle class="lg-ring" cx="24" cy="24" r="19" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="2 3"/><path d="M12 34V18l12 11 12-11v16" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 11c5-1 9 2 9 6-5 1-9-1-9-6z" fill="#69db7c"/></svg>
+<span class="veg"><i class="dot"></i> 100% Pure Vegetarian</span>
+<h1>Misthi</h1>
+<div class="hi">मिस्ठी द मल्टी क्यूज़ीन रेस्टोरेंट</div>
+<p>Chinese, North Indian, South Indian and more, served fresh in the heart of Naini, Prayagraj. Dine in, drive through, or get it delivered.</p>
+<div class="cta"><a class="btn" href="#menu">View Menu</a><a class="btn ghost" href="#order">Order Online</a></div>
+<div class="stats"><div><b>4.5 ★</b><span>897+ Google reviews</span></div><div><b>₹200–400</b><span>per person</span></div><div><b>11 PM</b><span>open till</span></div></div>
+</div></header>
+<div class="strip"><div><span>🌿 Pure Veg</span><span>🍜 Chinese</span><span>🍛 North Indian</span><span>🥞 South Indian</span><span>🍕 Pizza &amp; Pasta</span><span>🎉 Banquet Hall</span><span>🚗 Drive-through</span><span>🌿 Pure Veg</span><span>🍜 Chinese</span><span>🍛 North Indian</span><span>🥞 South Indian</span><span>🍕 Pizza &amp; Pasta</span><span>🎉 Banquet Hall</span><span>🚗 Drive-through</span></div></div>
+
+<section id="about"><div class="wrap">
+<div class="title"><h2>Why families love Misthi</h2><p>Good food, comfortable seating, honest prices.</p></div>
+<div class="grid">
+<div class="card"><div class="ic">🥗</div><h3>Pure Veg Kitchen</h3><p>Every dish is 100% vegetarian, made fresh with quality ingredients.</p></div>
+<div class="card"><div class="ic">🍜</div><h3>Multi Cuisine</h3><p>Indo-Chinese favourites, rich North Indian curries, South Indian classics and more.</p></div>
+<div class="card"><div class="ic">🚗</div><h3>Dine-in, Drive-through &amp; Delivery</h3><p>Eat with us, pick up on the go, or enjoy no-contact delivery at home.</p></div>
+<div class="card"><div class="ic">🎉</div><h3>Banquet &amp; Events</h3><p>Host birthdays, weddings and parties in our spacious banquet hall.</p></div>
+</div></div></section>
+
+<section class="alt" id="menu"><div class="wrap">
+<div class="title"><h2>Our Menu</h2><p>A taste of what we serve</p></div>
+<div class="tabs" role="tablist" id="tabs"></div>
+<div class="menu" id="menuList"></div>
+<p class="note">Prices and full list are in our menu card.</p>
+<p style="text-align:center"><a class="btn ghost" style="color:var(--accent)" target="_blank" rel="noopener" href="https://drive.google.com/file/d/1wg1zggOzp6PYlWxra6uU96py9OcF0gFc/view?usp=share_link">Open Full Menu (PDF)</a></p>
+</div></section>
+
+<section id="banquet"><div class="wrap two">
+<div><h2 style="font-size:2rem;margin-bottom:10px">Celebrate with us</h2>
+<p style="color:var(--muted)">Misthi also has a banquet hall, ideal for family functions and celebrations, with the same pure veg multi-cuisine menu your guests will enjoy.</p>
+<ul><li>Weddings, engagements and receptions</li><li>Birthday and anniversary parties</li><li>Corporate and kitty events</li><li>Customised veg menus</li></ul>
+<a class="btn" href="https://wa.me/919919887770?text=Hi%20Misthi%2C%20I%20want%20to%20enquire%20about%20banquet%20booking." target="_blank" rel="noopener">Enquire on WhatsApp</a></div>
+<div class="big"><div class="rate">4.5 ★</div><p style="margin:8px 0 0">Rated by 897+ happy guests on Google</p></div>
+</div></section>
+
+<section class="alt" id="order"><div class="wrap">
+<div class="title"><h2>Order Online</h2><p>Hungry? Get Misthi delivered.</p></div>
+<div class="order">
+<a class="btn" href="https://www.zomato.com/allahabad/misthi-bites-naini" target="_blank" rel="noopener">Order on Zomato</a>
+<a class="btn" href="https://www.swiggy.com/restaurants/misthi-the-multicuisine-restaurant-and-banquet-mirzapur-road-naini-allahabad-652759/dineout" target="_blank" rel="noopener">Swiggy / Book a Table</a>
+<a class="btn ghost" href="https://wa.me/919919887770?text=Hi%20Misthi%2C%20I%20want%20to%20place%20an%20order." target="_blank" rel="noopener">Order on WhatsApp</a>
+</div></div></section>
+
+<section id="contact"><div class="wrap two">
+<div><h2 style="font-size:2rem;margin-bottom:14px">Visit us</h2>
+<div class="contact">
+<div><small>Address</small>Cotton Mill Tiraha, Jockey Exclusive Store, Chak Raghunath, Naini, Prayagraj, Uttar Pradesh 211008</div>
+<div><small>Phone</small><a href="tel:+919919887770">099198 87770</a></div>
+<div><small>Hours</small>Open daily, closes 11 PM (may vary on festivals like Diwali)</div>
+</div>
+<p><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Misthi+The+Multi+Cuisine+Pure+Veg+Restaurant+Naini+Prayagraj">Get Directions</a></p></div>
+<div class="card" style="text-align:center"><div class="ic">📍</div><h3>Find us near Cotton Mill Tiraha</h3><p>On Mirzapur Road, Naini. Plus Code: 9VX8+WR Prayagraj</p></div>
+</div></section>
+
+<footer>© <span id="yr">2026</span> Misthi – The Multi Cuisine Pure Veg Restaurant · Naini, Prayagraj</footer>
+<a class="float" href="https://wa.me/919919887770" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+<script>
+const M={
+"Chinese":[["Veg Manchurian","Dry or gravy"],["Veg Hakka Noodles","Wok tossed"],["Chilli Paneer","Spicy and crisp"],["Veg Fried Rice","Classic"],["Spring Rolls","Crispy veg rolls"],["Veg Momos","Steamed or fried"]],
+"North Indian":[["Paneer Butter Masala","Rich and creamy"],["Dal Makhani","Slow cooked"],["Kadhai Paneer","Spicy and tangy"],["Mix Veg","Seasonal vegetables"],["Butter Naan / Tandoori Roti","Fresh from tandoor"],["Veg Biryani","With raita"]],
+"Soups &amp; Salads":[["Veg Manchow Soup","Hot and spicy"],["Sweet Corn Soup","Mild and comforting"],["Tomato Soup","With croutons"],["Green Salad","Fresh and crunchy"],["Kachumber Salad","Onion, tomato, cucumber"],["Raita","Boondi, mix veg or pineapple"]],"Breads &amp; Rice":[["Tandoori Roti","Plain or butter"],["Butter Naan","Soft and fluffy"],["Garlic Naan","Topped with garlic"],["Lachha Paratha","Layered"],["Jeera Rice","Cumin flavoured"],["Veg Pulao","Fragrant basmati"]],"Pizza &amp; Pasta":[["Margherita Pizza","Cheesy classic"],["Farmhouse Pizza","Loaded with veggies"],["White Sauce Pasta","Creamy"],["Red Sauce Pasta","Tangy tomato"],["Garlic Bread","With cheese"]],"Burgers &amp; Rolls":[["Aloo Tikki Burger","Crispy patty"],["Paneer Burger","Stuffed and juicy"],["Paneer Kathi Roll","Wrapped hot"],["Veg Wrap","Fresh and light"]],"South Indian":[["Masala Dosa","Crisp with potato filling"],["Idli Sambar","Soft and fluffy"],["Uttapam","Veg topped"],["Medu Vada","Served with chutney"]],
+"Starters &amp; Snacks":[["Paneer Tikka","Tandoor grilled"],["Crispy Corn","Tossed with spices"],["French Fries","Salted or peri peri"],["Veg Sandwich","Grilled"]],
+"Desserts &amp; Drinks":[["Gulab Jamun","Warm and soft"],["Ice Cream Sundae","Cool treat"],["Cold Coffee","Thick and chilled"],["Fresh Lime Soda","Sweet or salted"]]};
+const tabs=document.getElementById('tabs'),list=document.getElementById('menuList');
+function show(k){
+ [...tabs.children].forEach(b=>b.setAttribute('aria-selected',b.dataset.k===k));
+ list.innerHTML=M[k].map(i=>`<div class="item"><i class="dot"></i><div><b>${i[0]}</b><small>${i[1]}</small></div></div>`).join('');
+}
+Object.keys(M).forEach((k,i)=>{const b=document.createElement('button');b.className='tab';b.dataset.k=k;b.innerHTML=k;b.setAttribute('role','tab');b.onclick=()=>show(k);tabs.appendChild(b)});
+show(Object.keys(M)[0]);
+</script>
+</body>
+</html>
